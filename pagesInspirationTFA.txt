@@ -1,0 +1,26 @@
+
+site d'inspiration #1
+https://labarraca.nl/
+
+pour trouver des pages et s'inspirer 
+
+https://webflow.com/blog/restaurant-website-design?utm_source=google&utm_medium=search&utm_campaign=SS-GoogleSearch-Nonbrand-DynamicSearchAds-Tier2&utm_term=dsa-1480385100845___697641339344__&gad_source=1&gclid=EAIaIQobChMI5ani-MbRhgMVuWNBAh1WzQElEAAYASAAEgL3VfD_BwEb
+
+font pour le titre principal :
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+
+font pour les sous-titres :
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap');
+
+font pour les textes génerales: 
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+
+
+******************************************************
+site pour SVG gratuits 
+https://www.svgrepo.com/vectors/instagram/
+
+******************************************************
+
+site pour trasnformer les fonts : 
+https://transfonter.org/
