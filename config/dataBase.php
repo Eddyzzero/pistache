@@ -40,8 +40,6 @@ $conn->close();
 
 
 // ---------eviter les injections SQL ------ 
-
-
 // Préparer la requête SQL
 $stmt = $conn->prepare("INSERT INTO reservations (customer_name, customer_phone, customer_email, reservation_date, reservation_time, num_guests, special_requests) VALUES (?, ?, ?, ?, ?, ?, ?)");
 $stmt->bind_param("sssssis", $name, $phone, $email, $date, $time, $guests, $requests);
@@ -56,3 +54,82 @@ if ($stmt->execute()) {
 // Fermer la requête et la connexion
 $stmt->close();
 $conn->close();
+
+
+// --------- recuperer la base de données avec les recettes  ------ 
+
+// Requête SQL pour récupérer les starters
+$sql = "SELECT nom, description, prix FROM starters";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // Parcourir chaque ligne de résultat
+    while($row = $result->fetch_assoc()) {
+        echo "<h2>" . $row["nom"] . "</h2>";
+        echo "<p><strong>Description :</strong> " . $row["description"] . "</p>";
+        echo "<p><strong>Prix :</strong> $" . $row["prix"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "0 résultats";
+}
+
+// Requête SQL pour récupérer les maincourse
+$sql = "SELECT nom, description, prix FROM maincourse";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h2>" . $row["nom"] . "</h2>";
+        echo "<p><strong>Description :</strong> " . $row["description"] . "</p>";
+        echo "<p><strong>Prix :</strong> $" . $row["prix"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "0 résultats";
+}
+
+// Requête SQL pour récupérer les dessert
+$sql = "SELECT nom, description, prix FROM dessert";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h2>" . $row["nom"] . "</h2>";
+        echo "<p><strong>Description :</strong> " . $row["description"] . "</p>";
+        echo "<p><strong>Prix :</strong> $" . $row["prix"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "0 résultats";
+}
+
+// Requête SQL pour récupérer les beers
+$sql = "SELECT nom, description, prix FROM beers";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h2>" . $row["nom"] . "</h2>";
+        echo "<p><strong>Description :</strong> " . $row["description"] . "</p>";
+        echo "<p><strong>Prix :</strong> $" . $row["prix"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "0 résultats";
+}
+
+// Requête SQL pour récupérer les cocktails
+$sql = "SELECT nom, description, prix FROM cocktails";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while($row = $result->fetch_assoc()) {
+        echo "<h2>" . $row["nom"] . "</h2>";
+        echo "<p><strong>Description :</strong> " . $row["description"] . "</p>";
+        echo "<p><strong>Prix :</strong> $" . $row["prix"] . "</p>";
+        echo "<hr>";
+    }
+} else {
+    echo "0 résultats";
+}

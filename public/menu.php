@@ -193,7 +193,7 @@
                 <div class="line"></div>
             </div>
             <div>
-                <p>Gâteau dense et moelleux, souvent préparé avec des fruits secs et des épices, parfait pour les occasions spéciales.</p>
+                <p></p>
             </div>
         </div>
         <div>
