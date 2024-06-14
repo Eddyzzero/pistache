@@ -1,0 +1,14 @@
+{
+  "name": "pistache",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+  "compile": "sass --watch C:/xampp/htdocs/pistache/src/scss/app.scss style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.77.5"
+  }
+}

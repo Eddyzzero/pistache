@@ -1,1 +1,5 @@
-nodes_modulesgit 
+# nodes
+nodes_modules
+
+# ignore dataBase
+dataBase.sql

@@ -1,0 +1,20 @@
+
+// fonts
+
+// main font
+@import url('https://fonts.googleapis.com/css2?family=McLaren&display=swap');
+
+// mid font
+@import url('https://fonts.googleapis.com/css2?family=Tillana:wght@400;500;600;700;800&display=swap');
+
+// general text
+@import url('https://fonts.googleapis.com/css2?family=Metamorphous&display=swap');
+
+
+//importation des dossiers scss
+@import '1-settings/theme';
+
+@import '3-generic/reset';
+
+@import '6-skeletons/main';
+@import '6-skeletons/nav-bar';
