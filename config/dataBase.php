@@ -14,7 +14,7 @@ if ( $conn-> connect_error)
     die("connexion echoué: " . $conn->connect_error);
 }
 
-//Récuperation des données du formulaire
+//---------  Récuperation des données du formulaire pour les reservations   ------------------
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $email = $_POST['email'];
@@ -57,7 +57,6 @@ $conn->close();
 
 
 // --------- recuperer la base de données avec les recettes  ------ 
-
 // Requête SQL pour récupérer les starters
 $sql = "SELECT nom, description, prix FROM starters";
 $result = $conn->query($sql);
@@ -104,7 +103,7 @@ if ($result->num_rows > 0) {
     echo "0 résultats";
 }
 
-// Requête SQL pour récupérer les beers
+// Requête SQL pour récupérer les bieres
 $sql = "SELECT nom, description, prix FROM beers";
 $result = $conn->query($sql);
 
