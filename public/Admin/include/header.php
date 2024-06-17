@@ -8,7 +8,6 @@
 </head>
 <body>
 
-
     <nav>
         <a class="logo" href="../../assets/images/png/logoWhite.png">
             <img src="../assets/images/png/logoWhite.png" width="112" height="112" alt="">
@@ -19,10 +18,6 @@
         </ul>
         <a href="logout.php">Se déconnecter</a>
     </nav>
-
-    <section>
-        
-    </section>
 
 </body>
 </html>

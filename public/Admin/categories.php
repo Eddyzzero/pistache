@@ -7,6 +7,18 @@
     <title>Pistache-restaurant</title>
 </head>
 <body>
-    
+    <!-- ajoute du header -->
+    <?php include_once 'header.php' ?>
+
+     <div>
+        <h1>Catégories</h1>
+     </div>
+     <section>
+        <article>Entrées</article>
+        <article>Plats</article>
+        <article>Désserts</article>
+        <article>Boissons</article>
+        <article>Cocktails</article>
+     </section>
 </body>
 </html>
