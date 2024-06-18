@@ -1,92 +1,41 @@
-<?php 
+<?php
+require 'data/posts-list.php';
+ob_start(); ?>
 
-include '../../config/dataBase.php';
-include '../Admin/include/has_session.php';
+<section class="admin-header">
+	<h1>Articles</h1>
+	<a class="button-primary button-small button" href="posts-edit.php">Ajouter un article</a>
+</section>
 
-// construction de la requette SQL
-// récepere la table avec le menu
-// récuperer les starters
-$queryStarters = "SELECT id, nom, description, prix, datemodification FROM starters";
-$stmStarters = $pdo->query($queryStarters);
-$starters = $stmStarters -> fetchAll(PDO::FETCH_ASSOC);
+<section class="admin-content">
+	<table>
+		<?php foreach ( $posts as $menu ) :
+			$status = ($menu['status']) ? "Publié" : "Brouillon";
+			$created_at = date("d/m/Y", strtotime($menu['created_at']));
+			?>
+			<tr class="post-id-<?php echo $menu['id']; ?>">
+				<td>
+					<h3>
+						<a href="posts-edit.php?id=<?php echo $menu['id']; ?>"><?php echo $menu['nom']; ?></a>
+					</h3>
+					<div>
+						<a class="link-small link --publish" href="../single.php?id=<?php echo $menu['id']; ?>">Voir l’article</a>
+						<a class="link-small link --update" href="posts-edit.php?id=<?php echo $menu['id']; ?>">Modifier</a>
+						<button class="">Supprimer</button>
+					</div>
+				</td>
+				<td><?php echo $users['username']; ?></td>
+				<td><?php echo $status; ?></td>
+				<td><?php echo $created_at; ?></td>
+			</tr>
+		<?php endforeach; ?>
+	</table>
+</section>
 
-// récuperer les starters
-$queryMainCourses = "SELECT id, nom, description, prix, datemodification FROM mainCourses";
-$stmStarters = $pdo->query($queryMainCourses);
-$mainCourses = $stmStarters -> fetchAll(PDO::FETCH_ASSOC);
+<aside class="admin-sidebar">
+</aside>
 
-// récuperer les starters
-$queryDessert = "SELECT id, nom, description, prix, datemodification FROM dessert";
-$stmStarters = $pdo->query($queryDessert);
-$dessert = $stmDessert -> fetchAll(PDO::FETCH_ASSOC);
-
-// récuperer les starters
-$queryBeers= "SELECT id, nom, description, prix, datemodification FROM Beers";
-$stmStarters = $pdo->query($queryBeers);
-$Beers = $stmBeers -> fetchAll(PDO::FETCH_ASSOC);
-
-// récuperer les starters
-$queryCocktails = "SELECT id, nom, description, prix, datemodification FROM cocktails";
-$stmStarters = $pdo->query($queryCocktails);
-$cocktails = $stmCocktails -> fetchAll(PDO::FETCH_ASSOC);
-
+<?php
+$content = ob_get_clean();
+require 'views/layout/admin.php';
 ?>
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
-    <title>Pistache-restaurant</title>
-</head>
-<body>
-    <!-- ajoute de la navbar en php  -->
-     <?php  include_once '../Admin/include/header.php'?>
-    <section>
-        <section>
-            <h1>Liste</h1>
-        </section>
-        <section>
-            <form action="" id="search_form" method="GET">
-                <input type="text" name="search" placeholder="Chercher">
-                <button type="submit">Rechercher</button>
-            </form>
-
-            <!-- <form id="sortForm" method="GET" action="menus.php">
-                <label for="sort">Trier par :</label>
-                <select name="sort" id="sort" onchange="document.getElementById('sortForm').submit()">
-                    <option value="date_desc" <?php if (isset($_GET['sort']) && $_GET['sort'] == 'date_desc') echo 'selected'; ?>>Du plus récent au plus ancien</option>
-                    <option value="date_asc" <?php if (isset($_GET['sort']) && $_GET['sort'] == 'date_asc') echo 'selected'; ?>>Du plus ancien au plus récent</option>
-                    <option value="alpha_asc" <?php if (isset($_GET['sort']) && $_GET['sort'] == 'alpha_asc') echo 'selected'; ?>>Ordre alphabétique A-Z</option>
-                    <option value="alpha_desc" <?php if (isset($_GET['sort']) && $_GET['sort'] == 'alpha_desc') echo 'selected'; ?>>Ordre alphabétique Z-A</option>
-                </select>
-            </form> -->
-        </section>
-
-        <!-- table de recettes -->
-         <table>
-            <thead>
-                <tr>
-                    <th>Nom</th>
-                    <th>Status</th>
-                    <th>Date de modification</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                 <?php foreach ($starters as $starters) : ?>
-                    <tr>
-                        <td><?php echo htmlspecialchars($starters['nom']) ?></td>
-                        <td><?php echo htmlspecialchars($starters['description']) ?></td>
-                        <td><?php echo htmlspecialchars($starters['datemodification']) ?></td>
-                        <td><?php echo htmlspecialchars($starters['prix']) ?>€</td>
-                        <td><a href='post-edit.php?id=" . $row['id'] . "'>Modifier</a> / <a href='delete.php?id=" . $row['id'] . "'>Effacer</a></td>
-                    </tr>"; 
-                <?php endforeach ?>
-            </tbody>
-         </table>
-    </section>
-
-</body>
-</html>

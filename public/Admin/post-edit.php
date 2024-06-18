@@ -1,94 +1,61 @@
-<?php include '../../config/dataBase.php';
+<?php
+require 'data/posts-edit.php';
+ob_start(); ?>
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style.css">
-    <script src="https://cdn.tiny.cloud/1/mkfxg8pw6ff5aqh7crs5t8uqzq5mjjy7de64jwdn49atxjg9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
-    <title>Pistache-restaurant</title>
-</head>
-<html>
-    <body>
-        <!-- ajoute du header -->
-        <?php include_once 'header.php' ?>
+<section class="admin-header">
+	Ajouter un nouvel article
+</section>
 
-        <section>
-            <h1>Edition</h1>
-            <div>
-                <article>
-                    <h2>Détails de l'article</h2>
-                    <div>
-                        <form action="">
-                            <label for="nom">Nom</label>
-                            <input type="text" placeholder="nom de l'article" >
-                            <script>
-                                tinymce.init({
-                                    selector: 'textarea',
-                                    plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss markdown',
-                                    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-                                    tinycomments_mode: 'embedded',
-                                    tinycomments_author: 'Author name',
-                                    mergetags_list: [
-                                    { value: 'First.Name', title: 'First Name' },
-                                    { value: 'Email', title: 'Email' },
-                                    ],
-                                    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-                                });
-                            </script>
-                            <textarea>
-                                Welcome to TinyMCE!
-                            </textarea>
-                        </form>
-                    </div>
-                    <div>
-                        <div>
-                            <p>ajouter une image</p>
-                        </div>
-                        <div>
-                            <div>Brouillon</div>
-                            <div>Publier</div>
-                            <div>Supprimer</div>
-                        </div>
-                    </div>
-                </article>
+<section class="admin-content">
+	<form action="" method="POST">
+		<div>
+			<div class="form-row">
+				<label class="title" for="title">Titre de l’article</label>
+				<input id="nom" type="text" name="nom" placeholder="Titre de l'article" value="<?php echo (isset($menu['nom'])) ? $menu['nom'] : ''; ?>">
+			</div>
 
-                <!-- categories -->
-                 <article>
-                    <h3>categories</h3>
-                    <ul>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="categories" value="entrees"> Entrées
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="categories" value="plats"> Plats
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="categories" value="desserts"> Désserts
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="categories" value="boissons"> Boissons
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input type="checkbox" name="categories" value="cocktails"> Cocktails
-                            </label>
-                        </li>
-                    </ul>
-                 </article>
-            </div>
-        </section>
-    </body>
-</html>
+			<div class="form-row">
+				<label class="title" for="content">Contenu de l’article</label>
+				<textarea id="content" name="content" placeholder="Contenu de l’article"><?php echo $menu['content'] ?? ''; ?></textarea>
+			</div>
 
-<!-- Place the following <script> and <textarea> tags your HTML's <body> -->
+			<div class="form-row --button">
+				<?php if ( isset( $menu_id ) && ! empty ( $menu_id ) ) : ?>
+					<button type="submit" class="button-primary button-small button" name="update">Modifier</button>
+					<button type="submit" class="link-delete link" name="delete">Supprimer</button>
+				<?php else : ?>
+					<button type="submit" class="button-primary button-small button" name="publish">Publier</button>
+				<?php endif; ?>
+			</div>
+		</div>
+
+		<div>
+			<div class="form-row --checkbox">
+				<h3 class="title">Statut de l’article</h3>
+				<!-- <select name="status" id="status">
+					<option value="0" <?php echo ( isset( $menu['status'] ) && $menu['status'] == 0 ) ? 'selected' : ''; ?>>Brouillon</option>
+					<option value="1" <?php echo ( isset( $menu['status'] ) && $menu['status'] == 1 ) ? 'selected' : ''; ?>>Publié</option>
+				</select> -->
+
+				<div>
+					<div>
+						<input id="status" type="checkbox" name="status" <?php echo ( isset( $menu['status'] ) && $menu['status'] == 1 ) ? 'checked' : ''; ?>>
+						<label for="status">Publié</label>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-row --checkbox">
+				<h3 class="title">Catégorie de l’article</h3>
+
+				<div>
+					<?php foreach ($categories as $categorie) : ?>
+						<div>
+							<input id="categorie-<?php echo $categorie['id']; ?>" type="radio" name="categorie" value="<?php echo $categorie['id']; ?>" <?php echo ( isset( $menu['categorie_id'] ) && $menu['categorie_id'] == $categorie['id'] ) ? 'checked' : ''; ?>>
+							<label for="categorie-<?php echo $categorie['id']; ?>"><?php echo $categorie['nom']; ?></label>
+						</div>
+					<?php endforeach; ?>
+				</div>
+			</div>
+		</div>
+	</form>

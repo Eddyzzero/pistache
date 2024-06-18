@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 if ( isset( $_SESSION['last_activity'] ) && ( time() - $_SESSION['last_activity'] > 60*60*24 ) ) {
