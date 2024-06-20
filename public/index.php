@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../style.css">
     <title>Pistache-restaurant</title>
 </head>
-<body>
+<body class="body-main-page">
     <section class="logo-pistache">
         <!-- header -->
         <?php include_once './include/header.php'; ?>

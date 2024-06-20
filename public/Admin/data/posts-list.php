@@ -14,3 +14,15 @@ $statement->execute();
 $posts = $statement->fetchAll();
 
 // $pdo = null;
+include 'views/layout/admin.php';
+
+if (isset($_GET['delete_id'])) {
+    $id = $_GET['delete_id'];
+
+    $query = "DELETE FROM menu WHERE id = :id";
+    $statement = $pdo->prepare($query);
+    $statement->bindValue(':id', $id);
+    $statement->execute();
+
+    header('Location: posts-list.php');
+}

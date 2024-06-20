@@ -28,8 +28,9 @@ if ($_POST) {
         header('Location: posts-edit.php?id=' . $new_id);
     }
 
-    // UPDATE
+    //UPDATE
     if (isset($menu['update']) && !empty($menu_id)) {
+        
         $query = "UPDATE menu
         SET nom = :nom, description = :description, prix = :prix, categorie_id = :categorie_id, status = :status, updated_at = NOW()
         WHERE id = " . $menu_id;
@@ -40,7 +41,6 @@ if ($_POST) {
         $statement->bindValue(':prix', $menu['prix']);
         $statement->bindValue(':categorie_id', $menu['categorie_id']);
         $statement->bindValue(':status', $menu['status']);
-        $statement->bindValue(':menu_id', $menu_id);
         $statement->execute();
     }
 
@@ -68,9 +68,11 @@ if (isset($menu_id) && !empty($menu_id)) {
     $menu = $statement->fetch();
 }
 
-$query = "SELECT c.id, c.nom FROM categorie";
+$query = "SELECT * FROM categorie";
 
 $statement = $pdo->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll();
 ?>
+
+

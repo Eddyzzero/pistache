@@ -1,5 +1,6 @@
 <?php
 require 'data/posts-edit.php';
+
 ob_start(); ?>
 
 <section class="admin-header">
@@ -15,8 +16,8 @@ ob_start(); ?>
 			</div>
 
 			<div class="form-row">
-				<label class="title" for="content">Contenu de l’article</label>
-				<textarea id="content" name="content" placeholder="Contenu de l’article"><?php echo $menu['content'] ?? ''; ?></textarea>
+				<label class="title" for="description">Contenu de l’article</label>
+				<textarea id="description" name="description" placeholder="Contenu de l’article"><?php echo $menu['description'] ?? ''; ?></textarea>
 			</div>
 
 			<div class="form-row --button">
@@ -24,7 +25,7 @@ ob_start(); ?>
 					<button type="submit" class="button-primary button-small button" name="update">Modifier</button>
 					<button type="submit" class="link-delete link" name="delete">Supprimer</button>
 				<?php else : ?>
-					<button type="submit" class="button-primary button-small button" name="publish">Publier</button>
+					<button type="submit"  name="publish">Publier</button>
 				<?php endif; ?>
 			</div>
 		</div>
@@ -32,17 +33,10 @@ ob_start(); ?>
 		<div>
 			<div class="form-row --checkbox">
 				<h3 class="title">Statut de l’article</h3>
-				<!-- <select name="status" id="status">
+				<select name="status" id="status">
 					<option value="0" <?php echo ( isset( $menu['status'] ) && $menu['status'] == 0 ) ? 'selected' : ''; ?>>Brouillon</option>
 					<option value="1" <?php echo ( isset( $menu['status'] ) && $menu['status'] == 1 ) ? 'selected' : ''; ?>>Publié</option>
-				</select> -->
-
-				<div>
-					<div>
-						<input id="status" type="checkbox" name="status" <?php echo ( isset( $menu['status'] ) && $menu['status'] == 1 ) ? 'checked' : ''; ?>>
-						<label for="status">Publié</label>
-					</div>
-				</div>
+				</select>
 			</div>
 
 			<div class="form-row --checkbox">

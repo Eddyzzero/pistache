@@ -8,14 +8,14 @@
 </head>
 <body>
 
-    <nav>
+    <nav class="nav-bar-admin">
         <a class="logo" href="../../assets/images/png/logoWhite.png">
             <img src="../assets/images/png/logoWhite.png" width="200" height="112" alt="">
         </a>
         <ul>
-            <li><a href="../posts-list.php">liste</a></li>
-            <li><a href="../post-edit.php">Editer</a></li>
-            <li><a href="../users.php">Utilisateur</a></li>
+            <li><a href="categories.php">liste</a></li>
+            <li><a href="post-edit.php">Editer</a></li>
+            <li><a href="users.php">Utilisateur</a></li>
         </ul>
         <a href="logout.php">Se déconnecter</a>
     </nav>

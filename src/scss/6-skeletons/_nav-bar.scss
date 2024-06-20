@@ -1,0 +1,49 @@
+.body-main-page {
+    background-image: url(public/assets/images/mainPicture.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    row-gap: 60vh;
+    font-family: var( --font-general);
+    font-weight: 100;
+}
+
+.nav-bar {
+    ul { 
+        background-color: var(--color-white);
+        margin: 0 auto;
+        padding: 10px 20px;
+        border-radius: 20px;
+        max-width: 750px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding: 1em 2em;
+
+        li {
+
+            a {
+                color: var( --color-rich_black );
+                font-family:  var( --font-primary);
+                font-weight: 300;
+                text-decoration: none;
+                padding: 10px 20px;
+
+                &:hover {
+                    color: var(--color-white);
+                    background-color: var(--color-flame);
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                }
+
+            }
+        }
+
+    }
+
+
+}

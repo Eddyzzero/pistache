@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+}
+
+.body-restaurant {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-logo-text {
+    display: flex;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+
+    article  {
+        p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            font-family: var(--font-secondary);
+        }
+        
+    }
+}
+
+.btn-reserver {
+    background-color: var(--color-rich_black );
+    padding: 10px 20px;
+    font-size: 2em;
+    margin-top: 2em;
+    border-radius: 20px;
+
+    a {
+        color: var(--color-white);
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

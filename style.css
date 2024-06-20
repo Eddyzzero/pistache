@@ -4,8 +4,10 @@
 :root {
   --color-flame: #E4572E;
   --color-asperagus: #90A959;
-  --color-white: #FBFCFF
-  --color-rich_black : #04030F;
+  --color-gray: #b9b9b9;
+  --color-rich_black: #04030F;
+  --color-opacity-black: #2A2935;
+  --color-white: #ffffff;
   --font-primary:"McLaren", sans-serif;
   --font-secondary:"Tillana", sans-serif;
   --font-general:"Metamorphous", sans-serif;
@@ -62,18 +64,348 @@ table {
   border-spacing: 0;
 }
 
-body {
-  background-color: antiquewhite;
-}
-
 .logo-pistache {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 52px;
 }
-.logo-pistache img {
-  width: 50vw;
+
+.body-main-page {
+  background-image: url(public/assets/images/mainPicture.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  row-gap: 60vh;
+  font-family: var(--font-general);
+  font-weight: 100;
+}
+
+.nav-bar ul {
+  background-color: var(--color-white);
+  margin: 0 auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  max-width: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 1em 2em;
+}
+.nav-bar ul li a {
+  color: var(--color-rich_black);
+  font-family: var(--font-primary);
+  font-weight: 300;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+.nav-bar ul li a:hover {
+  color: var(--color-white);
+  background-color: var(--color-flame);
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.body-contact {
+  display: flex;
+  font-family: var(--font-general);
+  overflow-x: hidden;
+}
+
+.contact-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 60vh;
+  align-items: center;
+  background-image: url(public/assets/images/pexels-jose-prada-1063299555-20593401.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-left a img {
+  width: 100%;
+  max-width: 30vw;
+}
+
+.contact-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-rich_black);
+  color: var(--color-gray);
+}
+.contact-right .telephone-adresse {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.contact-right .telephone-adresse article p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.contact-right .telephone-adresse article p:nth-child(1) {
+  color: var(--color-asperagus);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+}
+.contact-right .container-horaires {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+.contact-right .container-horaires h2 {
+  color: var(--color-asperagus);
+  font-family: var(--font-secondary);
+  text-align: center;
+  font-size: 5em;
+  text-transform: uppercase;
+  padding-top: 1em;
+}
+.contact-right .horaires-ouverture {
+  display: flex;
+  gap: 3em;
+}
+.contact-right .horaires-ouverture div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+.contact-right .contact-container {
+  padding: 50px 0;
+}
+.contact-right .contact-container h2 {
+  font-size: 3em;
+  font-family: var(--font-secondary);
+  color: var(--color-asperagus);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.contact-right .contact-container form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-right .contact-container form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact-right .contact-container form div label {
+  color: var(--color-asperagus);
+  padding-top: 10px;
+}
+.contact-right .contact-container form div input {
+  width: 550px;
+  background-color: var(--color-opacity-black);
+  border: none;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+.contact-right button {
+  margin-top: 2em;
+  float: right;
+}
+
+.google-maps iframe {
+  border-radius: 20px;
+}
+
+.container-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2em;
+}
+.container-footer .social-logos {
+  display: flex;
+  gap: 30px;
+}
+.container-footer .container-logos-rights {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-footer .container-logos-rights p {
+  font-size: 10px;
+}
+.container-footer .small-logo-pistache img {
+  width: 10vw;
+}
+
+.body-menu {
+  display: flex;
+  font-family: var(--font-general);
+}
+
+.menu-left {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--color-rich_black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-gray);
+  padding: 20px 70px;
+}
+.menu-left ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10em;
+  background-color: var(--color-rich_black);
+  padding: 3em 0;
+}
+.menu-left ul a {
+  font-size: 1.5em;
+  color: var(--color-asperagus);
+  text-decoration: none;
+  font-family: var(--font-secondary);
+}
+.menu-left ul a:hover {
+  color: var(--color-flame);
+  cursor: pointer;
+}
+.menu-left .text {
+  padding: 15em 0;
+}
+.menu-left .text p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: white;
+}
+.menu-left .text p:nth-child(2) {
+  margin-top: 30px;
+}
+.menu-left .container-menu h2 {
+  font-size: 2em;
+  color: var(--color-asperagus);
+  padding: 20px 0;
+  text-transform: uppercase;
+}
+.menu-left .recipe-title {
+  display: flex;
+}
+.menu-left .recipe-title p {
+  width: 30%;
+  color: var(--color-asperagus);
+  margin-bottom: 1.5em;
+}
+.menu-left .recipe-title .line {
+  background-color: var(--color-asperagus);
+  height: 2px;
+  width: 100%;
+  margin-left: 5px;
+}
+
+.menu-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20vh;
+  background-image: url(public/assets/images/pexels-valeriya-20571435.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--color-gray);
+  position: fixed;
+  right: 0;
+}
+.menu-right a img {
+  width: 20vw;
+}
+.menu-right section p:nth-child(1) {
+  color: var(--color-flame);
+  font-family: var(--font-secondary);
+  font-size: 2em;
+  text-align: center;
+}
+.menu-right section p:nth-child(2) {
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  font-size: 5em;
+}
+
+html {
+  height: 100%;
+}
+
+.body-restaurant {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-logo-text {
+  display: flex;
+  gap: 5vw;
+  justify-content: center;
+  align-items: center;
+  padding: 0 50px;
+}
+.container-logo-text article p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  font-family: var(--font-secondary);
+}
+
+.btn-reserver {
+  background-color: var(--color-rich_black);
+  padding: 10px 20px;
+  font-size: 2em;
+  margin-top: 2em;
+  border-radius: 20px;
+}
+.btn-reserver a {
+  color: var(--color-white);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+}
+
+.btn {
+  color: var(--color-white);
+  background-color: var(--color-flame);
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-family: var(--font-primary);
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.admin-content {
+  padding: 40px;
+}
+
+.nav-bar-admin {
+  background-color: var(--color-rich_black);
+  width: 100dvh;
 }
 
 /*# sourceMappingURL=style.css.map */

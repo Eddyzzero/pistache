@@ -1,0 +1,19 @@
+.btn {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+} 
+
+.btn {
+    color: var(--color-white);
+    background-color: var(--color-flame);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-family: var(--font-primary);
+    font-size: 1em;
+    cursor: pointer;
+}

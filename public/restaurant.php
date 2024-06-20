@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <title>Pistache-restaurant</title>
 </head>
-<body>
+<body class="body-restaurant">
     <!-- burger menu -->
-    <section>
+    <!-- <section>
         <nav>
             <div class="ham-menu">
                 <span></span>
@@ -24,10 +24,10 @@
                 <li><a href="./index.php">acceuil</a></li>
             </ul>
         </div>
-    </section>
+    </section> -->
 
     <!-- presentation du site -->
-    <section>
+    <section class="container-logo-text">
         <a href="./index.php">
             <img src="./assets/images/png/Logo.png" alt="logo">
         </a>
@@ -39,10 +39,10 @@
             <p>Venez et laissez-vous séduire par l'essence de la Colombie !</p>
         </article>
     </section>
-    <section>
+    <section class="btn-reserver">
         <a href="./index.php">reserver</a>
     </section>
-    <section>
+    <!-- <section class="container-images">
         <picture><img src="./assets/images/arepas.jpg" alt=""></picture>
         <picture><img src="./assets/images/canelazo-spiced.jpg" alt=""></picture>
         <picture><img src="./assets/images/cazuela-de-mariscos.jpg" alt=""></picture>
@@ -54,6 +54,12 @@
         <picture><img src="./assets/images/lechona.jpg" alt=""></picture>
         <picture><img src="./assets/images/lechona.jpg" alt=""></picture>
         <picture><img src="./assets/images/michelada.jpg" alt=""></picture>
-    </section>
+    </section> -->
+
+    <script type="text/javascript" src="../skrollr.js"></script>
+	<script type="text/javascript">
+	var s = skrollr.init();
+	</script>
+</body>
 </body>
 </html>

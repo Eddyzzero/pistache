@@ -12,9 +12,22 @@
 
 
 //importation des dossiers scss
-@import '1-settings/theme';
+@import '1-settings/_theme';
 
-@import '3-generic/reset';
+@import '3-generic/_reset';
 
-@import '6-skeletons/main';
-@import '6-skeletons/nav-bar';
+@import '6-skeletons/_main';
+@import '6-skeletons/_nav-bar';
+@import '6-skeletons/_contact';
+@import '6-skeletons/_menu';
+@import '6-skeletons/_restaurant';
+
+@import '4-elements/_buttons';
+
+
+@import '8-admin/_categories';
+@import '8-admin/_header';
+
+
+
+

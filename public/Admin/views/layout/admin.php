@@ -3,15 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Bioblog</title>
-	<link rel="stylesheet" href="../assets/css/app.css">
+	<title>Pistache</title>
+	<!-- <link rel="stylesheet" href="../../../../style.css"> -->
 </head>
 
 <body class="admin <?php echo $page; ?>">
 	<?php if ( $page != 'login') :
 		include 'include/header.php';
 	endif; ?>
-
+	
 	<main>
 		<?php echo $content; ?>
 	</main>
@@ -30,7 +30,7 @@
 
 	<?php // include_once '../includes/footer.php'; ?>
 
-	<script src="../assets/app.js"></script>
+	<!-- <script src="../assets/app.js"></script> -->
 
 	<?php if ( $page == 'posts-edit.php' ) : ?>
 	<script src="https://cdn.tiny.cloud/1/xswlm84astace0qr6v2hdut445do9w67ky2rx4pai8d1xhbu/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
