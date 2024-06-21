@@ -44,10 +44,8 @@ ob_start();
         </section>
     </section>
 
-
-    <!-- <script src="path/to/your/js/script.js"></script> -->
+    <script src="../../src/js/script.js"></script>
 </body>
 </html>
 
 
-<script src="../../src/js/script.js"></script>

@@ -65,7 +65,7 @@
                     <div class="recipe-title">
                         <p>Ceviche de Camarones</p>
                         <div class="line"></div>
-                        <div>€</div>
+                        <div>10€</div>
                     </div>
                     <div>
                         <p>Un ceviche frais de crevettes mariné dans du jus de citron vert avec des oignons rouges, des tomates, du coriandre et un soupçon de piment.</p>
