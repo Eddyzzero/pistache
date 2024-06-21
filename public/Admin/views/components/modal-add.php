@@ -1,4 +1,4 @@
-<form class="" action="data/category_add.php" method="POST">
+<form class="" action="../../data/category-add.php" method="POST">
 	<label for="category_name">Ajouter une catégorie</label>
 	<input id="category_name" type="text" name="category_name" placeholder="Nom">
 

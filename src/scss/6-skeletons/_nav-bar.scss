@@ -6,7 +6,7 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    row-gap: 60vh;
+    row-gap: 2vh;
     font-family: var( --font-general);
     font-weight: 100;
 }
@@ -45,5 +45,42 @@
 
     }
 
+}
 
+.form-container {
+    position: relative;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: var(--color-white);
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input, textarea {
+        width: calc(100% - 20px);
+        padding: 8px 10px;
+        margin-bottom: 20px;
+        border: 1px solid var(--color-flame);
+        border-radius: 5px;
+    background: rgba(37, 37, 37, 0.4);
+        color: var(--color-flame);
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: #bbb;
+    }
+    
+    textarea {
+        height: 100px;
+        resize: none;
+    }
+
+    
+
+    
 }

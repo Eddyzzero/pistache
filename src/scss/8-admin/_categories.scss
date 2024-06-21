@@ -1,4 +1,47 @@
-.admin-content {
-    padding: 40px;
+.container-categories {
+    display: flex;
+    // background-color: var(--color-rich_black );
+
+    .categories {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 90px;
+        gap: 20px;
+    }
 
 }
+
+.admin-header {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 500;
+        font-family: var(--font-secondary);
+    }
+}
+
+.admin-content {
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 90px;
+        margin-bottom: 30px;
+
+        input {
+            border: 2px solid var(--color-opacity-black);
+            border-radius: 5px;
+            width: 50vh;
+            height: 2vw;
+
+        }
+
+    }
+
+}
+

@@ -17,8 +17,6 @@ ob_start(); ?>
 	</table>
 </section>
 
-<aside class="admin-sidebar">
-</aside>
 
 <?php
 $content = ob_get_clean();

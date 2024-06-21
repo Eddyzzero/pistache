@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -98,9 +98,9 @@
      <section class="container-footer">
     <article class="container-logos-rights">
         <div class="social-logos">
-            <a href="https://www.facebook.com/"><img src="./assets/icons/facebook-svgrepo-com.svg" alt="facebook" style="width: 20px;"></a>
-            <a href="https://wa.me/+320458251436" target="_blank"><img src="./assets/icons/whatsapp-128-svgrepo-com.svg" alt="whatsapp" style="width: 20px;"></a>
-            <a href="https://www.instagram.com"><img src="./assets/icons/instagram-f-svgrepo-com.svg" style="width: 20px;"></a>
+            <a href="https://www.facebook.com/"><img src="./assets/icons/facebook-svgrepo-com.png" alt="facebook" style="width: 20px;"></a>
+            <a href="https://wa.me/+320458251436" target="_blank"><img src="./assets/icons/whatsapp-128-svgrepo-com.png" alt="whatsapp" style="width: 20px;"></a>
+            <a href="https://www.instagram.com"><img src="./assets/icons/instagram-f-svgrepo-com.png" style="width: 20px;"></a>
         </div>
         <div>
             <p>©Jhon Florez, All rights reserved</p>

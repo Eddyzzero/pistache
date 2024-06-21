@@ -1,4 +1,32 @@
 .nav-bar-admin {
+    height: 100vh;
     background-color: var(--color-rich_black );
-    width: 100dvh;
+    color: var(--color-white );
+    padding: 40px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    ul {
+
+        li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: var(--color-white);
+            text-decoration: none;
+            font-family: var(--font-secondary);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--color-flame);
+        font-family: var(--font-secondary);
+
+
+    }
 }

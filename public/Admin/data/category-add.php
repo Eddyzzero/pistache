@@ -8,10 +8,10 @@ if ( $_POST ) {
 	VALUE (:nom)";
 
 	$statement = $pdo->prepare( $query );
-	$statement->bindValue( ':name', $_POST['category_name'] );
+	$statement->bindValue( ':nom', $_POST['category_name'] );
 	$statement->execute();
 
 	// // header("Refresh:0");
-	// header("Location: http://bioblog.localhost/admin/categories.php");
+	header("Location: http://localhost/TFA_pistache/public/admin/categories.php");
 
 }

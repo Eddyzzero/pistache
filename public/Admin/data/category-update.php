@@ -14,7 +14,4 @@ if ( $_POST ) {
 	$statement->bindValue( ':name', $menu['categorie_nom'] );
 	$statement->execute();
 
-	// header("Refresh:0");
-	header("Location: http://bioblog.localhost/admin/categories.php");
-
 }

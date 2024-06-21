@@ -43,22 +43,18 @@
         <a href="./index.php">reserver</a>
     </section>
     <!-- <section class="container-images">
-        <picture><img src="./assets/images/arepas.jpg" alt=""></picture>
-        <picture><img src="./assets/images/canelazo-spiced.jpg" alt=""></picture>
-        <picture><img src="./assets/images/cazuela-de-mariscos.jpg" alt=""></picture>
-        <picture><img src="./assets/images/ceviche.jpg" alt=""></picture>
-        <picture><img src="./assets/images/cholao.jpg" alt=""></picture>
-        <picture><img src="./assets/images/empanadas.jpeg" alt=""></picture>
-        <picture><img src="./assets/images/ajiaco.jpg" alt=""></picture>
-        <picture><img src="./assets/images/lulada.jpg" alt=""></picture>
-        <picture><img src="./assets/images/lechona.jpg" alt=""></picture>
-        <picture><img src="./assets/images/lechona.jpg" alt=""></picture>
-        <picture><img src="./assets/images/michelada.jpg" alt=""></picture>
+        <img src="./assets/images/arepas.jpg" alt="">
+        <img src="./assets/images/canelazo-spiced.jpg" alt="">
+        <img src="./assets/images/cazuela-de-mariscos.jpg" alt="">
+        <img src="./assets/images/ceviche.jpg" alt="">
+        <img src="./assets/images/cholao.jpg" alt="">
+        <img src="./assets/images/empanadas.jpeg" alt="">
+        <img src="./assets/images/ajiaco.jpg" alt="">
+        <img src="./assets/images/lulada.jpg" alt="">
+        <img src="./assets/images/lechona.jpg" alt="">
+        <img src="./assets/images/michelada.jpg" alt="">
     </section> -->
 
-    <script type="text/javascript" src="../skrollr.js"></script>
-	<script type="text/javascript">
-	var s = skrollr.init();
 	</script>
 </body>
 </body>

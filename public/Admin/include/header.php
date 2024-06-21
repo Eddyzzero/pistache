@@ -9,12 +9,12 @@
 <body>
 
     <nav class="nav-bar-admin">
-        <a class="logo" href="../../assets/images/png/logoWhite.png">
+        <a class="logo" href="posts-list.php">
             <img src="../assets/images/png/logoWhite.png" width="200" height="112" alt="">
         </a>
         <ul>
-            <li><a href="categories.php">liste</a></li>
-            <li><a href="post-edit.php">Editer</a></li>
+            <li><a href="categories.php">Categories</a></li>
+            <li><a href="posts-list.php">Articles</a></li>
             <li><a href="users.php">Utilisateur</a></li>
         </ul>
         <a href="logout.php">Se déconnecter</a>

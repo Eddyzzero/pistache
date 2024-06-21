@@ -1,0 +1,38 @@
+.container-posts-list {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+
+    .container-search-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 40px 0;
+    }
+}
+
+.articles-content{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .posts {
+        border: 1px solid gray;
+        padding: 10px 20px;
+        display: flex;
+        gap: 200px;
+
+        div {
+            margin: 15px 0;
+        }
+    }
+
+    .btn-articles {
+        font-size: .7rem;
+        text-decoration: none;
+        background-color: none;
+    }
+
+}

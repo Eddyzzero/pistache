@@ -1,5 +1,28 @@
+<?php 
+
+// require_once '../config/dataBase.php';
+
+// // Récupérer les données des catégories
+// $category_sql = "SELECT id, nom FROM categories";
+// $category_stmt = $pdo->query($category_sql);
+// $categories = [];
+// while ($row = $category_stmt->fetch(PDO::FETCH_ASSOC)) {
+//     $categories[] = $row;
+// }
+
+// // Récupérer les items du menu pour chaque catégorie
+// $menu = [];
+// foreach ($categories as $category) {
+//     $sql = "SELECT nom, prix, description FROM menu WHERE category_id = ?";
+//     $stmt = $pdo->prepare($sql);
+//     $stmt->execute([$category['id']]);
+//     $menu[$category['name']] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// }
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +30,7 @@
     <title>Pistache-restaurant</title>
 </head>
 <body class="body-menu">
-<?php ?>
+
 
     <section class="menu-left">
         <section>
@@ -34,6 +57,7 @@
             </p>
         </section>
 
+        <!-- menu et recettes -->
         <section class="container-menu">
             <h2 id="entrees">entrées</h2>
             <article>
@@ -41,6 +65,7 @@
                     <div class="recipe-title">
                         <p>Ceviche de Camarones</p>
                         <div class="line"></div>
+                        <div>€</div>
                     </div>
                     <div>
                         <p>Un ceviche frais de crevettes mariné dans du jus de citron vert avec des oignons rouges, des tomates, du coriandre et un soupçon de piment.</p>
@@ -592,3 +617,5 @@
 </section>
 </body>
 </html>
+
+
