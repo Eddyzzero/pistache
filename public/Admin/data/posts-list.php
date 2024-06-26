@@ -24,5 +24,4 @@ if (isset($_GET['delete_id'])) {
     $statement->bindValue(':id', $id);
     $statement->execute();
 
-    header('Location: posts-list.php');
 }

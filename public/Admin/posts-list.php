@@ -1,7 +1,5 @@
 <?php
-
-require 'data/posts-list.php';
-
+require 'data/posts-list.php'; 
 ?>
 
 <section class="container-posts-list">
@@ -35,9 +33,9 @@ require 'data/posts-list.php';
 						<h3>
 							<a <?php echo $menu['id']; ?>"><?php echo $menu['nom']; ?></a>
 						</h3>
-						<div>
-							<a class="btn btn-articles" href="post-edit.php?id=<?php echo $menu['id']; ?>">Modifier</a>
-							<button class="btn btn-articles" onclick="deleteMenuItem(<?php echo $menu['id']; ?>)">Supprimer</button>
+						<div class="btn-container">
+							<a class=" btn-articles" href="post-edit.php?id=<?php echo $menu['id']; ?>">Modifier</a>
+							<button class="btn-articles" onclick="deleteMenuItem(<?php echo $menu['id']; ?>)">Supprimer</button>
 						</div>
 						<td><?php echo $status; ?></td>
 						<td><?php echo $prix; ?> €</td>
@@ -67,13 +65,13 @@ require 'data/posts-list.php';
 		];
 
 	function renderElements() {
-		const elementList = document.getElementById('elementList');
+		const elementList = document.getElementById('listElement');
 		elementList.innerHTML = '';
 
 		elements.forEach(element => {
 			const li = document.createElement('li');
 			li.textContent = element.nom;
-			elementList.appendChild(li);
+			elementList.appendChild('li');
 		});
 	}
 
@@ -91,13 +89,13 @@ require 'data/posts-list.php';
 	});
 
 	function renderFilteredElements(filteredElements) {
-		const elementList = document.getElementById('elementList');
+		const elementList = document.getElementById('listElement');
 		elementList.innerHTML = '';
 
 		filteredElements.forEach(element => {
 			const li = document.createElement('li');
 			li.textContent = element.nom;
-			elementList.appendChild(li);
+			elementList.appendChild('li');
 		});
 	}
 
@@ -112,13 +110,13 @@ function renderFilteredElements(filteredElements, sortOrder = 'asc') {
         }
     });
 
-    const elementList = document.getElementById('elementList');
+    const elementList = document.getElementById('listElement');
     elementList.innerHTML = '';
 
     sortedElements.forEach(element => {
         const li = document.createElement('li');
         li.textContent = element.nom;
-        elementList.appendChild(li);
+        elementList.appendChild('li');
     });
 }
 </script>

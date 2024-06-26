@@ -8,10 +8,10 @@ if ( $_POST ) {
 	VALUE (:nom)";
 
 	$statement = $pdo->prepare( $query );
-	$statement->bindValue( ':nom', $_POST['category_name'] );
+	$statement->bindValue( ':nom', $_POST['categorie_nom'] );
 	$statement->execute();
 
-	// // header("Refresh:0");
-	header("Location: http://localhost/TFA_pistache/public/admin/categories.php");
-
+	// rediriger après sauvegarde
+	header("Location: /TFA_pistache/public/admin/categories.php");
+	exit();
 }

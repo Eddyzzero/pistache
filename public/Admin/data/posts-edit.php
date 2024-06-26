@@ -57,7 +57,7 @@ if ($_POST) {
 }
 
 if (isset($menu_id) && !empty($menu_id)) {
-    $query = "SELECT m.id, m.nom, m.description, m.prix, m.categorie_id, m.status, m.created_at, m.updated_at, c.nom as category_name
+    $query = "SELECT m.id, m.nom, m.description, m.prix, m.categorie_id, m.status, m.created_at, m.updated_at, c.nom as categorie_nom
     FROM menu m
     LEFT JOIN categorie c ON c.id = m.categorie_id
     WHERE m.id = :menu_id";

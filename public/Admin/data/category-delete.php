@@ -1,22 +1,20 @@
 <?php
+require_once '../../../config/database.php';
 
-require '../../../config/database.php';
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
+    $id = $_GET['id'];
 
-if ( $_POST ) {
+    $query = "DELETE FROM categorie WHERE id = :id";
+    $statement = $pdo->prepare($query);
+    $statement->bindValue(':id', $id, PDO::PARAM_INT);
+    $statement->execute();
 
-	$query="DELETE FROM categories_posts
-	WHERE categorie_id = " . $_POST['category_id'];
-
-	$statement = $pdo->prepare( $query );
-	$statement->execute();
-
-	$query="DELETE FROM categories
-	WHERE id = " . $_POST['category_id'];
-
-	$statement = $pdo->prepare( $query );
-	$statement->execute();
-
-	// header("Refresh:0");
-	header("Location: http://bioblog.localhost/admin/categories.php");
-
+    if ($statement->rowCount() > 0) {
+        echo 'success';
+    } else {
+        echo 'error';
+    }
+} else {
+    echo 'error';
 }
+?>

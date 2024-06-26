@@ -423,10 +423,6 @@ table {
   object-fit: cover;
 }
 
-.container-login form {
-  background-color: var(--color-rich_black);
-}
-
 .container-posts-list {
   display: flex;
   flex-direction: column;
@@ -509,9 +505,9 @@ table {
 
 .admin-content form {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 90px;
+  gap: 5px;
   margin-bottom: 30px;
 }
 .admin-content form input {
@@ -519,6 +515,20 @@ table {
   border-radius: 5px;
   width: 50vh;
   height: 2vw;
+}
+.admin-content form .btn-container {
+  display: flex;
+  gap: 20px;
+}
+.admin-content form .btn-container button {
+  border: none;
+  background-color: transparent;
+}
+.admin-content form .btn-container button:hover {
+  color: var(--color-asperagus);
+}
+.admin-content form .btn-container button:nth-child(2):hover {
+  color: var(--color-flame);
 }
 
 .nav-bar-admin {
@@ -544,6 +554,14 @@ table {
   text-decoration: none;
   color: var(--color-flame);
   font-family: var(--font-secondary);
+}
+
+.btn-container a, .btn-container button {
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-family: var(--font-primary);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -28,9 +28,9 @@
 .admin-content {
     form {
         display: flex;
+        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        gap: 90px;
+        gap: 5px;
         margin-bottom: 30px;
 
         input {
@@ -38,7 +38,27 @@
             border-radius: 5px;
             width: 50vh;
             height: 2vw;
+        }
 
+        .btn-container {
+            display: flex;
+            gap: 20px;
+
+            button {
+                border: none;
+                background-color: transparent;
+
+                &:hover {
+                    color: var(--color-asperagus);
+                }
+                
+                &:nth-child(2) {
+                    
+                    &:hover {
+                        color: var(--color-flame);
+                    }
+                }
+            }
         }
 
     }
