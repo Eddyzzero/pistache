@@ -73,6 +73,8 @@ $query = "SELECT * FROM categorie";
 $statement = $pdo->prepare($query);
 $statement->execute();
 $categories = $statement->fetchAll();
+
+header("location: C:\xampp\htdocs\TFA_pistache\public\admin\index.php")
 ?>
 
 
